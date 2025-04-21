@@ -99,3 +99,16 @@ if (storedAccounts.length > 0) {
     side: 'long'
   });
 }
+import { applyStopLoss, applyTrailingStop } from './services/riskManagement.js';
+
+const entry = 500;
+const stopLoss = applyStopLoss({ entryPrice: entry, stopLossPercent: 5 });
+console.log(`قیمت استاپ لاس برای ورود ${entry}: ${stopLoss}`);
+
+let lastPeak = 550;
+const trailingResult = applyTrailingStop({
+  currentPrice: 520,
+  trailingPercent: 3,
+  lastPeak
+});
+console.log(`تریلینگ استاپ:`, trailingResult);
