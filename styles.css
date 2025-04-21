@@ -1,0 +1,68 @@
+/* styles.css */
+
+/* فونت فارسی پیش‌فرض */
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  margin: 0;
+  padding: 0;
+  direction: ltr;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* حالت روز */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #0d47a1;
+}
+
+/* حالت شب */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --primary-color: #2196f3;
+}
+
+/* عنوان‌ها */
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin: 1rem;
+}
+
+/* جعبه تنظیمات */
+#grid-settings {
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+}
+
+/* لیست حساب‌ها */
+#account-list {
+  list-style: none;
+  padding: 1rem;
+}
+
+#account-list li {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+/* دکمه‌ها */
+button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
