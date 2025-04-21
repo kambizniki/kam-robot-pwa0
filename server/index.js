@@ -31,3 +31,22 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`سرور در پورت ${PORT} در حال اجرا است.`);
 });
+const express = require('express');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const botRoutes = require('./routes/bot');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+
+// استفاده از روت‌ها
+app.use('/api', botRoutes);
+
+// سرور شروع به کار می‌کند
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
