@@ -1,0 +1,14 @@
+{
+  "app_title": "Kam Robot",
+  "loading": "Loading...",
+  "settings": "Settings",
+  "save": "Save",
+  "accounts": "Accounts",
+  "add_account": "Add Account",
+  "grid_bot": "Grid Bot",
+  "start_bot": "Start Bot",
+  "stop_bot": "Stop Bot",
+  "language": "Language",
+  "dark_mode": "Dark Mode",
+  "light_mode": "Light Mode"
+}
