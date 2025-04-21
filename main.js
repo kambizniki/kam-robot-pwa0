@@ -85,3 +85,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = document.getElementById('app');
   app.appendChild(createXTAuthForm());
 });
+import { runGridBot } from './services/gridBot.js';
+
+// نمونه تست
+const storedAccounts = JSON.parse(localStorage.getItem('xtAccounts') || '[]');
+if (storedAccounts.length > 0) {
+  runGridBot({
+    apiKey: storedAccounts[0].apiKey,
+    apiSecret: storedAccounts[0].apiSecret,
+    pair: 'BNB/USDT',
+    range: { min: 464, max: 745 },
+    gridCount: 10,
+    side: 'long'
+  });
+}
