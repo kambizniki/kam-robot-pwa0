@@ -108,7 +108,11 @@ const qty = 1;
 
 const result = calculatePnL({ entryPrice: entry, exitPrice: exit, quantity: qty });
 console.log(`سود/زیان: ${result.pnlUSDT} USDT (${result.pnlPercent}%)`);
+import { t, toggleLang } from './i18n/i18n.js';
 
+document.getElementById('lang-btn').addEventListener('click', toggleLang);
+document.getElementById('title').textContent = t('welcome');
+document.getElementById('start-bot-label').textContent = t('startBot');
 const entry = 500;
 const stopLoss = applyStopLoss({ entryPrice: entry, stopLossPercent: 5 });
 console.log(`قیمت استاپ لاس برای ورود ${entry}: ${stopLoss}`);
