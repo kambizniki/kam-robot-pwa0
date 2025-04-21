@@ -1,13 +1,13 @@
 {
   "name": "Kam Robot",
   "short_name": "KamBot",
-  "description": "ربات گرید هوشمند برای معامله در صرافی XT",
+  "description": "ربات گرید کریپتو برای XT با پشتیبانی از فارسی و انگلیسی",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0d47a1",
-  "orientation": "portrait",
   "lang": "fa",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "/icons/icon-192x192.png",
