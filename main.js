@@ -100,6 +100,14 @@ if (storedAccounts.length > 0) {
   });
 }
 import { applyStopLoss, applyTrailingStop } from './services/riskManagement.js';
+import { calculatePnL } from './services/profitLoss.js';
+
+const entry = 500;
+const exit = 540;
+const qty = 1;
+
+const result = calculatePnL({ entryPrice: entry, exitPrice: exit, quantity: qty });
+console.log(`سود/زیان: ${result.pnlUSDT} USDT (${result.pnlPercent}%)`);
 
 const entry = 500;
 const stopLoss = applyStopLoss({ entryPrice: entry, stopLossPercent: 5 });
