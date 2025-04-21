@@ -79,3 +79,9 @@ function displayGridSettings() {
 
 // نمایش تنظیمات در صفحه
 displayGridSettings();
+import { createXTAuthForm } from './components/XTAuthForm.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const app = document.getElementById('app');
+  app.appendChild(createXTAuthForm());
+});
